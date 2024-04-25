@@ -13,6 +13,7 @@ const authorRouter = require("./routes/authors");
 const bookRouter = require("./routes/books");
 
 app.set("view engine", "ejs");
+app.use(express.static(__dirname + "/public/"));
 app.set("views", __dirname + "/views");
 app.set("layout", "layouts/layout");
 app.use(expressLayouts);
